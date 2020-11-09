@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="shortcut icon" href=" http://redsox.uoa.auckland.ac.nz/ds/logo-192x192.png"/>
+        <title>Dunedin Diary</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="yzho976.css"/>
+        <script src="yzho976.js"></script>
+    </head>
+    <body>
+
+        <!-- code for topbar -->
+        <div class="top">
+            <a href="yzho976.html">
+                <img src="http://redsox.uoa.auckland.ac.nz/ds/logo.svg"> 
+            </a>
+            <div id='logoutbut' onclick="logout()" style="display: none;">
+                <a style="color: blue;">Logout</a>
+            </div> 
+            <div id='loginbut' onclick="showloginpage()">
+                <a style="color: blue;">Login</a>
+            </div> 
+        </div>
+
+        <!-- code for userbar -->
+        <div class="userbar">
+
+        </div>
+
+        <!-- code for navbar -->
+        <div class="nav">
+            <div id="nav1" onclick="showhomepage()"><a>🏠</a></div>
+            <div id="nav2" onclick="showproductpage()"><a>🛒</a></div>
+            <div id="nav3" onclick="showmappage()"><a>📌</a></div>
+            <div id="nav4" onclick="shownewspage()"><a>📰</a></div>
+            <div id="nav5" onclick="showguestbookpage()"><a>📖</a></div>
+            <div id="nav6" onclick="showregisterpage()"><a>🙋</a></div>
+        </div>
+
+        <!-- code for content -->
+        <div class="content">
+
+            <!-- code for homepage -->
+            <div class="homepage" id="home">
+                <h1>Welcome to Dunedin Diary！</h1>
+                <p>Dunedin has a long a long association with the dairy industry. New Zealand’s first co-operative dairy factory opened on the Otago Peninsula in 1871, when the eight shareholders of John Matheson & Co. established the Peninsula Cheese Factory at Matheson’s Springfield property. The development of infrastructure and technology saw rapid growth in the industry from the 1880s, when further factories were built around the country. Improved transport networks, refrigeration in both factories and transportation, cream separators, new testing methods, and selective breeding all contributed to the rapid growth of an export industry in the decades that followed. Combined exports of butter and cheese grew from 5,000 tonnes in 1881, to 300,000 tonnes in 1901.</p>
+                <img src="http://file.cnkang.com/cnkfile1/M00/18/D9/ooYBAFoNID6AeYkXAAjisVvUtHA00.jpeg">
+            </div>
+
+            <!-- code for productpage -->
+            <div class="productpage" id="product" style="display: none;">
+                <h1>Products</h1>
+                <input id="searchbar" class="search" type="text" onkeydown="closetimer()" onkeyup="starttimer()" placeholder=" Enter Product Name here...">
+                <div id="showpdt"></div>
+            </div>
+
+            <!-- code for mappage -->
+            <div class="mappage" id="map" style="display: none;">
+                <h1>Location</h1>
+                <img class="mapimg" src="http://redsox.uoa.auckland.ac.nz/ds/map.png">
+                <div id="showloc" style="background-color: blanchedalmond; border-radius: 20px;">
+                </div>
+            </div>
+
+            <!-- code for newspage -->
+            <div class="newspage" id="news" style="display: none;">
+                <h1>What's NEW</h1>
+                <div id="shownws"></div>
+            </div>
+
+            <!-- code for guestpage -->
+            <div class="guestbookpage" id="guestbook" style="display: none;">
+                <h1>Anything to Say?</h1>
+                <input id="nm" class="inputname" type="text" placeholder="Name">
+                <textarea id="cmt" class="inputcomment" type="text" placeholder="Comment here..."></textarea>
+                <hr>
+                <button onclick="submitcomment()" >Submit</button>
+                <h2>Comments</h2>
+                <div id="showcmt"></div>
+            </div>
+
+            <!-- code for registerpage -->
+            <div class="registerpage" id="register" style="display: none;">
+                <h1 style="text-align: center;">Join Us</h1>
+                <h3>*Username:</h3>
+                <input id="username" class="inputregi" type="text" placeholder="Username">
+                <h3>*Password:</h3>
+                <input id="password" class="inputregi" type="text" placeholder="Password">
+                <!-- <h3>Address:</h3>
+                <input id="address" class="inputregi" type="text" placeholder="Address"> -->
+                <p style="font-size: 50%;">Field with * must be filled</p>
+                <hr>
+                <button onclick="register()">Register</button>
+            </div>
+
+            <!-- code for loginpage -->
+            <div class="loginpage" id="login" style="display: none;">
+                <h1>Login</h1>
+                <h3>Username:</h3>
+                <input id="loginun" class="inputregi" type="text" placeholder="Username">
+                <h3>Password:</h3>
+                <input id="loginpw" class="inputregi" type="text" placeholder="Password">
+                <hr>
+                <button onclick="login()">Login</button>
+            </div>
+
+        </div>
+
+    </body>
+
+</html>
